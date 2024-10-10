@@ -10,6 +10,7 @@ import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
@@ -72,14 +73,11 @@ export default function Header({setCollapsed}) {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <MenuOpenIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            
-          </Typography>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ justifyContent: 'center', display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          
+
+          <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="info">
                 <MailIcon />
               </Badge>
@@ -93,6 +91,13 @@ export default function Header({setCollapsed}) {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
+
+
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ justifyContent: 'center', display: { xs: 'none', md: 'flex' } }}>
+          <Box variant="body1" sx={{ justifyItems: 'center', alignItems: 'center', display: { xs: 'none', md: 'flex' } }}>
+                <Typography>Hola, Carlos Perez</Typography>
+            </Box>
             <IconButton
               size="large"
               edge="end"
